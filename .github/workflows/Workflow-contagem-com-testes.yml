@@ -1,0 +1,37 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is executing Actions now 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-java@v4
+        with:
+           java-version: '16'
+           distribution: 'temurin'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 #v4.0.0
+        with:
+           cache-cleanup: always
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test the code."
+      - name: List files in the repository
+        run:  ls ${{ github.workspace }}
+      - name: Configurando permissões do script
+        run:  chmod 777 ./pointCountWithTests.sh
+      - name: Executando script de contagem de pontos
+        run:  ./pointCountWithTests.sh
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
