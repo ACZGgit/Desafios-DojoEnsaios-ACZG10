@@ -130,7 +130,25 @@ class CalculadoraCientificaServiceTest extends Specification {
         12  | 3  | 36
         100 | 20 | 2000
         55  | 10 | 550
-
     }
 
+    void "raiz quadrada de (#x)"() {
+        expect:
+        calculadoraCientificaService.raiz(x) == resultado
+
+        where:
+        x  | resultado
+        25 | 5
+        49 | 7
+        64 | 8
+        36 | 6
+    }
+
+    void "raiz quadrada de numero negativo deve retornar excecao (#x)"() {
+        when:
+        calculadoraCientificaService.raiz(-4) == resultado
+
+        then:
+        thrown(ArithmeticException)
+    }
 }

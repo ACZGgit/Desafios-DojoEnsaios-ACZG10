@@ -46,4 +46,13 @@ class CalculadoraCientificaService implements ICalculadora{
         return lastResult
     }
 
+    double raiz(double x) {
+        if (x < 0) {
+            throw new ArithmeticException("Valor não pode ser negativo")
+        }
+
+        lastResult = Math.sqrt(x)
+        return lastResult
+    }
+
 }
