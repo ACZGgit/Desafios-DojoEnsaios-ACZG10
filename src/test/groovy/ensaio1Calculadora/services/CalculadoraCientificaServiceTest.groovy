@@ -1,5 +1,6 @@
 package ensaio1Calculadora.services
 import spock.lang.Specification
+import spock.lang.Unroll
 
 class CalculadoraCientificaServiceTest extends Specification {
 
@@ -170,5 +171,21 @@ class CalculadoraCientificaServiceTest extends Specification {
 
         then:
         thrown(ArithmeticException)
+    }
+
+
+    @Unroll
+    void "porcentagem deve retornar %#porcentagemDesejada de #meuNumero"() {
+        when:"passar uma porcetagem e um número"
+        double resultado = calculadoraCientificaService.porcentagem(porcentagemDesejada, meuNumero)
+
+        then: "o resultado deve ser igual ao esperado"
+        resultado == numeroEsperado
+
+        where:
+        porcentagemDesejada | meuNumero || numeroEsperado
+        50 | 100 || 50
+        20 | 300 || 60
+        44 | 872 || 383.68
     }
 }

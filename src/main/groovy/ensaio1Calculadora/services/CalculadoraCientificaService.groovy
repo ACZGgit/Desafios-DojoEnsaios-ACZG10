@@ -64,4 +64,9 @@ class CalculadoraCientificaService implements ICalculadora{
         return lastResult
     }
 
+    double porcentagem(double x, double y) {
+        lastResult = (x * y) / 100
+        return lastResult
+    }
+
 }
