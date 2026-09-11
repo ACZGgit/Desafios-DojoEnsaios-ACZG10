@@ -1,7 +1,7 @@
 Instrução, adicione seu nome com um "OK" na frente e faça um push: (ex. Eduardo - ok)
 1: João Pedro     - OK
 2: Alan Ferreira  - OK
-3: Myke Silva     -
+3: Myke Silva     - OK
 4: Nelson         -
 5: Gustavo        -
 6: Túlio          - OK
