@@ -69,4 +69,10 @@ class CalculadoraCientificaService implements ICalculadora{
         return lastResult
     }
 
+    double log(double x){
+        if (x <= 0) throw new ArithmeticException("Valor não pode ser menor ou igual a 0")
+        lastResult = Math.log10(x)
+        return lastResult
+    }
+
 }

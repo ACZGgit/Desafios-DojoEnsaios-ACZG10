@@ -188,4 +188,23 @@ class CalculadoraCientificaServiceTest extends Specification {
         20 | 300 || 60
         44 | 872 || 383.68
     }
+
+    void "logaritmo (#x)"(double resultado){
+        expect:
+            calculadoraCientificaService.log(x) == resultado
+
+        where:
+            x     | resultado
+            25    | 1.3979400086720377
+            12738 | 4.105101244549642
+    }
+
+    void "logaritmo onde #x é menor ou igual a 0"(double x){
+        when:
+            calculadoraCientificaService.log(x)
+        then:
+            thrown(ArithmeticException)
+        where:
+            x << (0..-20)
+    }
 }
