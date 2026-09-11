@@ -1,12 +1,11 @@
 Instrução, adicione seu nome com um "OK" na frente e faça um push: (ex. Eduardo - ok)
-1: Ângelo Keller         -
-2: Gustavo Cardoso       -
-3: João Pedro            -
-4: Levi Braga            -
-5: Matheus Cerqueira     -
-6: Nathan Teixeira       -
-7: Saulo Rodrigues       -
-8: Willian Carbone       -
+1: João Pedro     -
+2: Alan Ferreira  -
+3: Myke Silva     -
+4: Nelson         -
+5: Gustavo        -
+6: Túlio          -
+7: Gildésio       -
 
 
 
