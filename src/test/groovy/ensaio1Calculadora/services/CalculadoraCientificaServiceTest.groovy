@@ -127,7 +127,7 @@ class CalculadoraCientificaServiceTest extends Specification {
         where:
         x   | y  | resultado
         2   | 2 | 4
-        12  | 3  | 39
+        12  | 3  | 36
         100 | 20 | 2000
         55  | 10 | 550
 
