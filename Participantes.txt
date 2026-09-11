@@ -4,7 +4,7 @@ Instrução, adicione seu nome com um "OK" na frente e faça um push: (ex. Eduar
 3: Myke Silva     -
 4: Nelson         -
 5: Gustavo        -
-6: Túlio          -
+6: Túlio          - OK
 7: Gildésio       -
 8: Henrique       - OK
 
