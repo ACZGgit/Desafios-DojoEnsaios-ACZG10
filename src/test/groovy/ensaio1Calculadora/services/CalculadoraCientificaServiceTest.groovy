@@ -97,4 +97,26 @@ class CalculadoraCientificaServiceTest extends Specification {
         10  | 10 | 0
     }
 
+    void "Divisao de dois valores(#x, #y)"(){
+        expect:
+        calculadoraCientificaService.div(x, y) == resultado
+
+        where:
+        x   | y  | resultado
+        5   | 7  | 1
+        12  | 3  | 4
+        100 | 20 | 5
+        55  | 10 | 5.5
+
+    }
+
+    void "Divisao de dois valores com valor 0(#x, #y)"(){
+
+        when:
+        calculadoraCientificaService.div(10, 0)
+
+       then:
+       thrown(ArithmeticException)
+
+    }
 }

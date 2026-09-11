@@ -13,6 +13,7 @@ class CalculadoraCientificaService implements ICalculadora{
     }
 
     double getLastResult(){
+
     }
 
     private void setLastResult(double lastResult){
@@ -32,7 +33,11 @@ class CalculadoraCientificaService implements ICalculadora{
 
     @Override
     double div (double x, double y){
-        return 0
+        if (y == 0){
+            throw new ArithmeticException ("Valor 0 não permitido")
+        }
+        lastResult =  x / y
+        return lastResult
     }
 
     @Override
