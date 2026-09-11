@@ -20,7 +20,8 @@ class CalculadoraCientificaService implements ICalculadora{
 
     @Override
     double sum(double x, double y){
-        return 0
+        double result = x + y
+        return result
     }
 
     @Override
