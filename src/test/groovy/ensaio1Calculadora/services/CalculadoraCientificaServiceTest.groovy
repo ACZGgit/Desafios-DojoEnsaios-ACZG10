@@ -119,4 +119,18 @@ class CalculadoraCientificaServiceTest extends Specification {
        thrown(ArithmeticException)
 
     }
+
+    void "multiplicacao de dois valores(#x, #y)"(){
+        expect:
+        calculadoraCientificaService.mult(x, y) == resultado
+
+        where:
+        x   | y  | resultado
+        2   | 2 | 4
+        12  | 3  | 39
+        100 | 20 | 2000
+        55  | 10 | 550
+
+    }
+
 }
