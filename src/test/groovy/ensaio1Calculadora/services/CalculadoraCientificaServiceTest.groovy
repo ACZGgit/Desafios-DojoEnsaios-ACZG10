@@ -85,4 +85,16 @@ class CalculadoraCientificaServiceTest extends Specification {
 
     }
 
+    void "Subtração de dois valores (#x,#y)"() {
+        expect:
+        calculadoraCientificaService.sub(x,y) == resultado
+
+        where:
+        x   | y  | resultado
+        1   | 1  | 0
+        3   | 5  | -2
+        100 | 20 | 80
+        10  | 10 | 0
+    }
+
 }
