@@ -151,4 +151,24 @@ class CalculadoraCientificaServiceTest extends Specification {
         then:
         thrown(ArithmeticException)
     }
+
+    void "potencia(#x, #y)"() {
+        expect:
+        calculadoraCientificaService.pot(x, y) == resultado
+
+        where:
+        x   | y  | resultado
+        2   | 2 | 4
+        4  | 2  | 16
+        100 | 2 | 10000
+        7  | 2 | 49
+    }
+
+    void "potencia com base negativa (#x, #y)"() {
+        when:
+        calculadoraCientificaService.pot(4, -2) == resultado
+
+        then:
+        thrown(ArithmeticException)
+    }
 }

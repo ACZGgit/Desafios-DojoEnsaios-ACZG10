@@ -55,4 +55,13 @@ class CalculadoraCientificaService implements ICalculadora{
         return lastResult
     }
 
+    double pot(double x, int y) {
+        if (y < 0) {
+            throw new ArithmeticException("Valor não pode ser negativo")
+        }
+
+        lastResult = Math.pow(x, y)
+        return lastResult
+    }
+
 }
