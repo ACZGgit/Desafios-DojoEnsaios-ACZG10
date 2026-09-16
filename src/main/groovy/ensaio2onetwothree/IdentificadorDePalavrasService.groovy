@@ -16,7 +16,8 @@ class IdentificadorDePalavrasService {
 
             //percorrendo caracteres
             for (c in palavra) {
-                if (c == certo[contadorIndex]) {
+                String tempLetra =certo[contadorIndex][0]
+                if (c == certo[contadorIndex][0]) {
                     int indexContagem = listaDePalavras.indexOf(palavra)
                     certoContagem[indexContagem]++
                 }
