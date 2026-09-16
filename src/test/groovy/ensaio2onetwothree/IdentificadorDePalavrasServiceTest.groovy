@@ -35,4 +35,22 @@ class IdentificadorDePalavrasServiceTest extends Specification {
         "3,nne,thpee,owo"         | "1,3,2"
     }
 
+    void "percorrendo caracter por caracter"() {
+        given:
+        String teste = "abcde"
+
+        when:
+
+        int contador = 0 ;
+
+        for (c in teste ) {
+            println(c)
+            contador++
+        }
+
+        then:
+        teste.length()==contador
+
+    }
+
 }
