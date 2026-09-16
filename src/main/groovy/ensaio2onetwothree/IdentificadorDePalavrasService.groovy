@@ -7,9 +7,20 @@ class IdentificadorDePalavrasService {
         List<String> listaDePalavras = entrada.tokenize(',')
         // Lógica
         List<String> certo = ["one", "two", "three"]
-        int countLetrasCorretas = 0
-        for (int i = 1) {
-            
+        for (String palavras : listaDePalavras) {
+            int countLetrasCorretas = 0
+            for (String caracter : palavras) {
+                for (String palavraCerta : certo) {
+                    for (String caracterCerto : palavraCerta) {
+                        if (caracter.equals(caracterCerto)){
+                            countLetrasCorretas++
+                            if(countLetrasCorretas == palavraCerta.size()-1){
+
+                            }
+                        }
+                    }
+                }
+            }
         }
 
 
