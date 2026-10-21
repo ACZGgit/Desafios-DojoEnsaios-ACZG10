@@ -27,22 +27,32 @@ class JogadorDeFutebol {
     int getIdade() {
         int res = ChronoUnit.YEARS.between(dataNascimento, LocalDate.now()) as int;
         return res
-
-//        def diferencaData =LocalDate.now().toEpochSecond()  - this.dataNascimento.toEpochSecond()
-//        return diferencaData.toDate().getYear()
-
     }
 
     int getTempoParaAposentar() {
+        int idadeParaAposentar
         switch (posicao){
             case Posicao.ATACANTE:
+                if (getIdade() >= 35) {
+                    return 0
+                }
+                idadeParaAposentar = 35 - getIdade()
                 break
             case Posicao.DEFESA:
+                if (getIdade() >= 40) {
+                    return 0
+                }
+                idadeParaAposentar = 40 - getIdade()
                 break
             case Posicao.MEIO_CAMPO:
+                if (getIdade() >= 38) {
+                    return 0
+                }
+                idadeParaAposentar = 38 - getIdade()
                 break
 
         }
+        return idadeParaAposentar
 
     }
     
