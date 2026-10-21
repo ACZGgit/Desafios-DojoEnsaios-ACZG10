@@ -4,13 +4,16 @@ import java.time.LocalDate
 
 class JogadorDeFutebol {
     String nome
+    String nacionalidade
     Posicao posicao
     LocalDate dataNascimento
     double peso
     double altrura
 
-    JogadorDeFutebol(String nome, String posicao, LocalDate dataNascimento, double peso, double altrura) {
+    JogadorDeFutebol(String nome, Posicao posicao, LocalDate dataNascimento,String nacionalidade,  double peso,
+                     double altrura) {
         this.nome = nome
+        this.nacionalidade = nacionalidade
         this.posicao = posicao
         this.dataNascimento = dataNascimento
         this.peso = peso
@@ -18,7 +21,9 @@ class JogadorDeFutebol {
     }
 
     int getIdade() {
-        return (LocalDate.now().minusYears(dataNascimento).year)
+        def diferencaData =LocalDate.now().toEpochSecond()  - this.dataNascimento.toEpochSecond()
+        return diferencaData.toDate().getYear()
+
     }
 
 //    int getTempoParaAposentar() {}
