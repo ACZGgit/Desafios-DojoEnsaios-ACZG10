@@ -25,7 +25,7 @@ class JogadorDeFutebolTest extends Specification {
 
     void "Deve calcular a idade do jogador | Base_750"() {
         given:
-        int idadeEsperadaEmAnos = 125
+        int idadeEsperadaEmAnos = 126
 
         when:
         int idadeObtida = jogadorDeFutebol.getIdade()
