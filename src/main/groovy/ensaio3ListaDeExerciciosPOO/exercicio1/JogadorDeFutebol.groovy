@@ -31,24 +31,19 @@ class JogadorDeFutebol {
 
     int getTempoParaAposentar() {
         int idadeParaAposentar
+        int idadeEsperadaParaAposentar
         switch (posicao){
             case Posicao.ATACANTE:
-                if (getIdade() >= 35) {
-                    return 0
-                }
-                idadeParaAposentar = 35 - getIdade()
+                idadeEsperadaParaAposentar = 35
+                idadeParaAposentar = getIdade() - idadeEsperadaParaAposentar
                 break
             case Posicao.DEFESA:
-                if (getIdade() >= 40) {
-                    return 0
-                }
-                idadeParaAposentar = 40 - getIdade()
+                idadeEsperadaParaAposentar = 40
+                idadeParaAposentar = getIdade() - idadeEsperadaParaAposentar
                 break
             case Posicao.MEIO_CAMPO:
-                if (getIdade() >= 38) {
-                    return 0
-                }
-                idadeParaAposentar = 38 - getIdade()
+                idadeEsperadaParaAposentar = 38
+                idadeParaAposentar = getIdade() - idadeEsperadaParaAposentar
                 break
 
         }

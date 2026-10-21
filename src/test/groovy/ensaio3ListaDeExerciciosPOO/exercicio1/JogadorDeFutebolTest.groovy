@@ -37,9 +37,9 @@ class JogadorDeFutebolTest extends Specification {
 
     void "Deve calcular o tempo para o jogador aposentar"() {
         given:
-        int idadeDoJogador = 125
+        int idadeDoJogador = 126
         int tempoParaAtacanteAposentar = 35
-        int tempoEsperadoParaJogadorAposentar = tempoParaAtacanteAposentar - idadeDoJogador
+        int tempoEsperadoParaJogadorAposentar = idadeDoJogador - tempoParaAtacanteAposentar
 
         when:
         int tempoObtidoParaJogadorAposentar = jogadorDeFutebol.getTempoParaAposentar()
@@ -47,5 +47,7 @@ class JogadorDeFutebolTest extends Specification {
         then:
         tempoEsperadoParaJogadorAposentar == tempoObtidoParaJogadorAposentar
     }
+
+
 
 }
