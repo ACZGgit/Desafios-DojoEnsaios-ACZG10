@@ -4,7 +4,7 @@ import java.time.LocalDate
 
 class JogadorDeFutebol {
     String nome
-    String posicao
+    Posicao posicao
     LocalDate dataNascimento
     double peso
     double altrura
