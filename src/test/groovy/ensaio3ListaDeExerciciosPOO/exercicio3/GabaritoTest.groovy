@@ -19,7 +19,7 @@ class GabaritoTest extends Specification {
 
     def "metodo respostaquestao retorna valor correto"(Integer numero) {
         expect:
-        gabarito.respotaQuestao(numero) == resposta
+        gabarito.respostaQuestao(numero) == resposta
 
         where:
         numero | resposta

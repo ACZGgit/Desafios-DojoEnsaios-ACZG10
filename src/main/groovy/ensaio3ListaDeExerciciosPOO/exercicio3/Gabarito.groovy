@@ -10,6 +10,6 @@ class Gabarito {
     char respostaQuestao(Integer numeroQuestao){
         if (!gabarito.containsKey(numeroQuestao)) throw new Exception("Argumento invalido, essa questao nao existe no gabarito.")
 
-        gabarito.get(numeroQuestao)
+        (gabarito.get(numeroQuestao)) as char
     }
 }
