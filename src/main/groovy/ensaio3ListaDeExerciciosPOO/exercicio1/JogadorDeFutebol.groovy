@@ -14,7 +14,7 @@ class JogadorDeFutebol {
     double peso
     double altrura
 
-    JogadorDeFutebol(String nome, Posicao posicao, LocalDate dataNascimento,String nacionalidade,  double peso,
+    JogadorDeFutebol(String nome, Posicao posicao, LocalDate dataNascimento, String nacionalidade, double peso,
                      double altrura) {
         this.nome = nome
         this.nacionalidade = nacionalidade
@@ -32,34 +32,41 @@ class JogadorDeFutebol {
     int getTempoParaAposentar() {
         int idadeParaAposentar
         int idadeEsperadaParaAposentar
-        switch (posicao){
+        switch (posicao) {
             case Posicao.ATACANTE:
                 idadeEsperadaParaAposentar = 35
-                idadeParaAposentar = getIdade() - idadeEsperadaParaAposentar
+                idadeParaAposentar = idadeEsperadaParaAposentar - getIdade()
                 break
             case Posicao.DEFESA:
                 idadeEsperadaParaAposentar = 40
-                idadeParaAposentar = getIdade() - idadeEsperadaParaAposentar
+                idadeParaAposentar = idadeEsperadaParaAposentar - getIdade()
                 break
             case Posicao.MEIO_CAMPO:
                 idadeEsperadaParaAposentar = 38
-                idadeParaAposentar = getIdade() - idadeEsperadaParaAposentar
+                idadeParaAposentar = idadeEsperadaParaAposentar - getIdade()
                 break
 
         }
         return idadeParaAposentar
 
     }
-    
+
 
     @Override
     String toString() {
         return "JogadorDeFutebol{" +
-                "nome='" + nome + '\'' +
-                ", posicao='" + posicao + '\'' +
-                ", dataNascimento=" + dataNascimento +
-                ", peso=" + peso +
-                ", altrura=" + altrura +
-                '}';
+               "nome='" +
+               nome +
+               '\'' +
+               ", posicao='" +
+               posicao +
+               '\'' +
+               ", dataNascimento=" +
+               dataNascimento +
+               ", peso=" +
+               peso +
+               ", altrura=" +
+               altrura +
+               '}';
     }
 }
